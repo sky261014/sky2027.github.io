@@ -3,10 +3,100 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>sky2027</title>
+  <title>sky2027 실습 자료</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Pretendard", "Malgun Gothic", sans-serif;
+      background: #f4f6fb;
+      color: #222;
+    }
+    header {
+      text-align: center;
+      padding: 48px 16px 24px;
+    }
+    header h1 { margin: 0 0 8px; font-size: 2rem; }
+    header p { margin: 0; color: #666; }
+
+    .grid {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 16px 16px 64px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      display: block;
+      background: #fff;
+      border-radius: 14px;
+      padding: 24px;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+    .card .num {
+      font-size: 0.85rem;
+      font-weight: bold;
+      color: #4a6cf7;
+    }
+    .card h2 { margin: 8px 0 12px; font-size: 1.2rem; }
+    .card .status {
+      display: inline-block;
+      font-size: 0.8rem;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #eee;
+      color: #888;
+    }
+    /* 아직 링크가 없는 카드 */
+    .card.soon { cursor: not-allowed; opacity: 0.85; }
+  </style>
 </head>
 <body>
-  <h1>안녕하세요!</h1>
-  <p>sky2027.github.io 첫 페이지입니다.</p>
+  <header>
+    <h1>sky2027 실습 자료</h1>
+    <p>바이브코딩 수업에서 만든 프로젝트 모음</p>
+  </header>
+
+  <!-- 링크가 준비되면 href="#" 를 실제 주소로 바꾸고, class 의 soon 과 "준비 중" 표시를 지우면 됩니다 -->
+  <main class="grid">
+    <a class="card soon" href="#" onclick="return false;">
+      <span class="num">01</span>
+      <h2>할일 목록 리스트</h2>
+      <span class="status">준비 중</span>
+    </a>
+    <a class="card soon" href="#" onclick="return false;">
+      <span class="num">02</span>
+      <h2>클로드 활용 구슬던지기 게임</h2>
+      <span class="status">준비 중</span>
+    </a>
+    <a class="card soon" href="#" onclick="return false;">
+      <span class="num">03</span>
+      <h2>개인 프로파일</h2>
+      <span class="status">준비 중</span>
+    </a>
+    <a class="card soon" href="#" onclick="return false;">
+      <span class="num">04</span>
+      <h2>00000</h2>
+      <span class="status">준비 중</span>
+    </a>
+    <a class="card soon" href="#" onclick="return false;">
+      <span class="num">05</span>
+      <h2>11111</h2>
+      <span class="status">준비 중</span>
+    </a>
+    <a class="card soon" href="#" onclick="return false;">
+      <span class="num">06</span>
+      <h2>22222</h2>
+      <span class="status">준비 중</span>
+    </a>
+  </main>
 </body>
 </html>
