@@ -309,7 +309,9 @@
     const DATA = {
       startDate: '2026-10-14',
       stats: {
-        done: 1, total: 6,
+        // 완료한 프로젝트 수는 아래 프로젝트 카드 중 링크가 연결된(soon 이 아닌) 카드 수로 자동 계산
+        done: document.querySelectorAll('.grid .card:not(.soon)').length,
+        total: document.querySelectorAll('.grid .card').length,
         weekHours: 9.5, weekDiff: '+2.0시간 (지난주 대비)',
         streak: 5, streakNote: '최고 기록 8일',
       },
